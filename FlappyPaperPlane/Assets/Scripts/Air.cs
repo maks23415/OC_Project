@@ -31,4 +31,12 @@ public class Air : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("player") || collision.CompareTag("wardrobe"))
+        {
+            Score.score++;
+        }
+    }
 }
