@@ -8,11 +8,14 @@ public class Air : MonoBehaviour
     public float rotatePower;
     public float jumpSpeed;
     public float speed;
+    public AudioClip jumpSound;
 
+    private AudioSource source;
     private Rigidbody2D rb;
     private void Start()
     {
         Object.speed = speed;
+        source = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
 
     }
@@ -21,6 +24,7 @@ public class Air : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            source.PlayOneShot(jumpSound, 0.3f);
             rb.linearVelocity = Vector2.up * jumpSpeed;
 
         }
