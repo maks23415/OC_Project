@@ -12,6 +12,7 @@ public class Air : MonoBehaviour
 
     private AudioSource source;
     private Rigidbody2D rb;
+
     private void Start()
     {
         Object.speed = speed;
@@ -28,12 +29,13 @@ public class Air : MonoBehaviour
             rb.linearVelocity = Vector2.up * jumpSpeed;
 
         }
-        transform.eulerAngles = new Vector3(0, 0, rb.linearVelocity.y* rotatePower);
+        transform.eulerAngles = new Vector3(0, 0, rb.linearVelocity.y * rotatePower);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene("Game");
+        // При смерти загружаем главное меню
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
