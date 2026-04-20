@@ -1726,7 +1726,6 @@ GameObject:
   - component: {fileID: 1366886172}
   - component: {fileID: 1366886175}
   - component: {fileID: 1366886174}
-  - component: {fileID: 1366886173}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -1753,21 +1752,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000015258789, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1366886173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366886171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08ec4402d7ed2da4e8a96352f089a685, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelNumber: 2
-  levelText: {fileID: 0}
-  lockIcon: {fileID: 0}
 --- !u!114 &1366886174
 MonoBehaviour:
   m_ObjectHideFlags: 0
