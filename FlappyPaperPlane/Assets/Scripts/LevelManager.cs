@@ -10,8 +10,11 @@ public class LevelManager : MonoBehaviour
     private int currentLevel = 1;
     private int maxUnlockedLevel = 1;
 
-    // Добавьте эту переменную для форсированного сброса
-    public bool forceReset = false; // Временно включите true для сброса
+    [Header("Настройки уровней")]
+    public int maxLevelsCount = 3; // Укажи здесь максимальное количество уровней!
+
+    [Header("Сброс (только для тестов)")]
+    public bool forceReset = false;
 
     private void Awake()
     {
@@ -29,29 +32,27 @@ public class LevelManager : MonoBehaviour
 
     private void LoadProgress()
     {
-        // ФОРСИРОВАННЫЙ СБРОС - включите это один раз
         if (forceReset)
         {
             maxUnlockedLevel = 1;
             PlayerPrefs.SetInt("MaxUnlockedLevel", 1);
             PlayerPrefs.Save();
-            Debug.Log("Форсированный сброс выполнен! Доступен только уровень 1");
-            forceReset = false; // Отключаем после сброса
+            Debug.Log("Прогресс принудительно сброшен! Открыт только уровень 1");
+            forceReset = false;
             return;
         }
 
-        // Обычная загрузка
         if (PlayerPrefs.HasKey("MaxUnlockedLevel"))
         {
             maxUnlockedLevel = PlayerPrefs.GetInt("MaxUnlockedLevel");
-            Debug.Log("Загружен сохраненный прогресс: уровень " + maxUnlockedLevel);
+            Debug.Log("Загружен сохранённый прогресс: открыто уровней - " + maxUnlockedLevel);
         }
         else
         {
             maxUnlockedLevel = 1;
             PlayerPrefs.SetInt("MaxUnlockedLevel", 1);
             PlayerPrefs.Save();
-            Debug.Log("Создан новый прогресс: доступен только уровень 1");
+            Debug.Log("Первый запуск игры: открыт уровень 1");
         }
     }
 
@@ -59,12 +60,20 @@ public class LevelManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("MaxUnlockedLevel", maxUnlockedLevel);
         PlayerPrefs.Save();
-        Debug.Log("Прогресс сохранен: разблокировано уровней - " + maxUnlockedLevel);
+        Debug.Log("Прогресс сохранён: максимальный открытый уровень - " + maxUnlockedLevel);
     }
 
     public void LoadLevel(int levelNumber)
     {
-        Debug.Log("Попытка загрузить уровень " + levelNumber + ". Доступно уровней: " + maxUnlockedLevel);
+        // Защита от загрузки несуществующих уровней
+        if (levelNumber > maxLevelsCount)
+        {
+            Debug.Log("Все уровни пройдены! Возвращаемся в меню.");
+            SceneManager.LoadScene("MainMenu"); // Замени на сцену победы, если она есть
+            return;
+        }
+
+        Debug.Log("Попытка загрузить уровень " + levelNumber + ". Открыто уровней: " + maxUnlockedLevel);
 
         if (levelNumber <= maxUnlockedLevel)
         {
@@ -81,7 +90,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Уровень " + levelNumber + " еще не разблокирован!");
+            Debug.Log("Уровень " + levelNumber + " ещё не открыт!");
         }
     }
 
@@ -89,13 +98,13 @@ public class LevelManager : MonoBehaviour
     {
         int nextLevel = currentLevel + 1;
 
-        Debug.Log("Завершен уровень " + currentLevel + ". Пытаемся разблокировать уровень " + nextLevel);
+        Debug.Log("Завершён уровень " + currentLevel + ". Пытаемся открыть следующий: " + nextLevel);
 
-        if (nextLevel > maxUnlockedLevel)
+        if (nextLevel > maxUnlockedLevel && nextLevel <= maxLevelsCount)
         {
             maxUnlockedLevel = nextLevel;
             SaveProgress();
-            Debug.Log("РАЗБЛОКИРОВАН уровень " + nextLevel + "!");
+            Debug.Log("Открыт новый уровень " + nextLevel + "!");
         }
 
         LoadLevel(nextLevel);
@@ -113,14 +122,13 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    // Сброс прогресса
     public void ResetProgress()
     {
         maxUnlockedLevel = 1;
         currentLevel = 1;
         PlayerPrefs.SetInt("MaxUnlockedLevel", 1);
         PlayerPrefs.Save();
-        Debug.Log("Прогресс сброшен! Доступен только уровень 1");
+        Debug.Log("Прогресс полностью сброшен! Открыт только уровень 1");
     }
 
     public int GetCurrentLevel()
@@ -131,5 +139,17 @@ public class LevelManager : MonoBehaviour
     public int GetMaxUnlockedLevel()
     {
         return maxUnlockedLevel;
+    }
+
+    // Добавь это в LevelManager.cs
+    public void SaveNewProgress(int levelToUnlock)
+    {
+        if (levelToUnlock > maxUnlockedLevel && levelToUnlock <= maxLevelsCount)
+        {
+            maxUnlockedLevel = levelToUnlock;
+            PlayerPrefs.SetInt("MaxUnlockedLevel", maxUnlockedLevel);
+            PlayerPrefs.Save();
+            Debug.Log("В фоне разблокирован уровень: " + levelToUnlock);
+        }
     }
 }
