@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3612961273999030986}
   - component: {fileID: 2903334151549242541}
   - component: {fileID: 1395025881297467950}
+  - component: {fileID: 8174734387544302307}
   m_Layer: 0
   m_Name: "\u0441\u043A\u043E\u0431\u0430 \u0434\u0430 (1)_0 (1)"
   m_TagString: Untagged
@@ -160,11 +161,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5381a9cbc882cb4ba7d9b0d09db7176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusPoints: 2
+  bonusPoints: 0
   collectSound: {fileID: 8300000, guid: 85f0bd21eb9327249b7c653b00b9389f, type: 3}
   volume: 0.7
   animationDuration: 1
   upwardSpeed: 2
+--- !u!114 &8174734387544302307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139723970008692288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 2
 --- !u!1 &1307884227022880385
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,6 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4751468200223658882}
   - component: {fileID: 1942039741113030572}
+  - component: {fileID: 2842576364915427313}
   m_Layer: 0
   m_Name: per
   m_TagString: Untagged
@@ -255,6 +270,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2842576364915427313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307884227022880385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 1
 --- !u!1 &2754334630238438286
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +296,7 @@ GameObject:
   - component: {fileID: 1674107349205318023}
   - component: {fileID: 7473518832185495384}
   - component: {fileID: 5014068582640245051}
+  - component: {fileID: 7087038902039812705}
   m_Layer: 0
   m_Name: "\u0441\u043A\u043E\u0431\u0430 \u0434\u0430 (1)_0 (2)"
   m_TagString: Untagged
@@ -415,11 +444,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5381a9cbc882cb4ba7d9b0d09db7176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusPoints: 2
+  bonusPoints: 0
   collectSound: {fileID: 8300000, guid: 85f0bd21eb9327249b7c653b00b9389f, type: 3}
   volume: 0.7
   animationDuration: 1
   upwardSpeed: 2
+--- !u!114 &7087038902039812705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2754334630238438286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 2
 --- !u!1 &9055482664470416451
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +475,7 @@ GameObject:
   - component: {fileID: 7570963617321267241}
   - component: {fileID: 8871121004296961757}
   - component: {fileID: 4533375579577118878}
+  - component: {fileID: 342022738368291824}
   m_Layer: 0
   m_Name: "\u0441\u043A\u043E\u0431\u0430 \u0434\u0430 (1)_0"
   m_TagString: Untagged
@@ -580,8 +623,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5381a9cbc882cb4ba7d9b0d09db7176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusPoints: 2
+  bonusPoints: 0
   collectSound: {fileID: 8300000, guid: 85f0bd21eb9327249b7c653b00b9389f, type: 3}
   volume: 0.7
   animationDuration: 1
   upwardSpeed: 2
+--- !u!114 &342022738368291824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9055482664470416451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 2

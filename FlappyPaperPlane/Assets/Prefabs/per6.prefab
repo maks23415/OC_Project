@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7863136841569941927}
   - component: {fileID: 850082569252148653}
   - component: {fileID: 6108422093067501497}
+  - component: {fileID: 8690836286275894968}
   m_Layer: 0
   m_Name: "\u0441\u043A\u043E\u0431\u0430 \u0434\u0430 (1)_0"
   m_TagString: Untagged
@@ -160,11 +161,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5381a9cbc882cb4ba7d9b0d09db7176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusPoints: 2
+  bonusPoints: 0
   collectSound: {fileID: 8300000, guid: 85f0bd21eb9327249b7c653b00b9389f, type: 3}
   volume: 0.7
   animationDuration: 1
   upwardSpeed: 2
+--- !u!114 &8690836286275894968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494847670370587552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 2
 --- !u!1 &1575233358543063390
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +192,7 @@ GameObject:
   - component: {fileID: 4288370933911193871}
   - component: {fileID: 1117501458620555884}
   - component: {fileID: 4969742064176578802}
+  - component: {fileID: 77865547189144795}
   m_Layer: 0
   m_Name: "\u0441\u043A\u043E\u0431\u0430 \u0434\u0430 (1)_0 (2)"
   m_TagString: Untagged
@@ -325,11 +340,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5381a9cbc882cb4ba7d9b0d09db7176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusPoints: 2
+  bonusPoints: 0
   collectSound: {fileID: 8300000, guid: 85f0bd21eb9327249b7c653b00b9389f, type: 3}
   volume: 0.7
   animationDuration: 1
   upwardSpeed: 2
+--- !u!114 &77865547189144795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575233358543063390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 2
 --- !u!1 &1772461421809198616
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +371,7 @@ GameObject:
   - component: {fileID: 6464040740009856280}
   - component: {fileID: 6276771373662967953}
   - component: {fileID: 97310340095554051}
+  - component: {fileID: 5586423028719859662}
   m_Layer: 0
   m_Name: "\u0441\u043A\u043E\u0431\u0430 \u0434\u0430 (1)_0 (1)"
   m_TagString: Untagged
@@ -490,11 +519,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5381a9cbc882cb4ba7d9b0d09db7176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusPoints: 2
+  bonusPoints: 0
   collectSound: {fileID: 8300000, guid: 85f0bd21eb9327249b7c653b00b9389f, type: 3}
   volume: 0.7
   animationDuration: 1
   upwardSpeed: 2
+--- !u!114 &5586423028719859662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772461421809198616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 2
 --- !u!1 &2663290174888863133
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2957069595423002084}
   - component: {fileID: 278025160071727985}
+  - component: {fileID: 6566382080507155144}
   m_Layer: 0
   m_Name: per6
   m_TagString: Untagged
@@ -586,6 +629,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6566382080507155144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2663290174888863133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 1
 --- !u!1 &3492538488840373214
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +655,7 @@ GameObject:
   - component: {fileID: 1640021123509846647}
   - component: {fileID: 765242159955827842}
   - component: {fileID: 2676704172715658282}
+  - component: {fileID: 2506451494770906003}
   m_Layer: 0
   m_Name: "\u0441\u043A\u043E\u0431\u0430 \u0434\u0430 (1)_0"
   m_TagString: Untagged
@@ -746,8 +803,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5381a9cbc882cb4ba7d9b0d09db7176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusPoints: 2
+  bonusPoints: 0
   collectSound: {fileID: 8300000, guid: 85f0bd21eb9327249b7c653b00b9389f, type: 3}
   volume: 0.7
   animationDuration: 1
   upwardSpeed: 2
+--- !u!114 &2506451494770906003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3492538488840373214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 2

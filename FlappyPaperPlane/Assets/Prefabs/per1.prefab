@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8532106523203700113}
   - component: {fileID: -773247787929663104}
+  - component: {fileID: -3757285717348745371}
   m_Layer: 0
   m_Name: per1
   m_TagString: Untagged
@@ -90,6 +91,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3757285717348745371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105840325889606971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 1
 --- !u!1 &4491452914574776142
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +117,7 @@ GameObject:
   - component: {fileID: 3121592569266419956}
   - component: {fileID: 8727247520268718138}
   - component: {fileID: 4832386497595661668}
+  - component: {fileID: 3258279709969912}
   m_Layer: 0
   m_Name: "\u0441\u043A\u043E\u0431\u0430 \u0434\u0430 (1)_0 (2)"
   m_TagString: Untagged
@@ -250,11 +265,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5381a9cbc882cb4ba7d9b0d09db7176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusPoints: 2
+  bonusPoints: 0
   collectSound: {fileID: 8300000, guid: 85f0bd21eb9327249b7c653b00b9389f, type: 3}
   volume: 0.7
   animationDuration: 1
   upwardSpeed: 2
+--- !u!114 &3258279709969912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4491452914574776142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 2
 --- !u!1 &5698453460522514431
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +296,7 @@ GameObject:
   - component: {fileID: 4308158785233416719}
   - component: {fileID: 8984346669127985811}
   - component: {fileID: 4527684536229645383}
+  - component: {fileID: 8253600229671475640}
   m_Layer: 0
   m_Name: "\u0441\u043A\u043E\u0431\u0430 \u0434\u0430 (1)_0"
   m_TagString: Untagged
@@ -415,11 +444,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5381a9cbc882cb4ba7d9b0d09db7176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusPoints: 2
+  bonusPoints: 0
   collectSound: {fileID: 8300000, guid: 85f0bd21eb9327249b7c653b00b9389f, type: 3}
   volume: 0.7
   animationDuration: 1
   upwardSpeed: 2
+--- !u!114 &8253600229671475640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5698453460522514431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 2
 --- !u!1 &6784323394278992267
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,6 +475,7 @@ GameObject:
   - component: {fileID: 1990260578849851574}
   - component: {fileID: 1144054938616330178}
   - component: {fileID: 6208685437666956873}
+  - component: {fileID: 6807223999698956659}
   m_Layer: 0
   m_Name: "\u0441\u043A\u043E\u0431\u0430 \u0434\u0430 (1)_0 (1)"
   m_TagString: Untagged
@@ -580,8 +623,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5381a9cbc882cb4ba7d9b0d09db7176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusPoints: 2
+  bonusPoints: 0
   collectSound: {fileID: 8300000, guid: 85f0bd21eb9327249b7c653b00b9389f, type: 3}
   volume: 0.7
   animationDuration: 1
   upwardSpeed: 2
+--- !u!114 &6807223999698956659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6784323394278992267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80b6f60b7a8cdca479394b3d6dc4ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 2
