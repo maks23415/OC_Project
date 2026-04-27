@@ -626,7 +626,7 @@ MonoBehaviour:
   bonusPoints: 0
   collectSound: {fileID: 8300000, guid: 85f0bd21eb9327249b7c653b00b9389f, type: 3}
   volume: 0.7
-  animationDuration: 1
+  animationDuration: 10
   upwardSpeed: 2
 --- !u!114 &342022738368291824
 MonoBehaviour:
