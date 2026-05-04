@@ -7,7 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     void Start()
     {
-        // При запуске главного меню выводим информацию о прогрессе
         if (LevelManager.Instance != null)
         {
             Debug.Log("Текущий прогресс: разблокировано уровней - " + LevelManager.Instance.GetMaxUnlockedLevel());
@@ -16,7 +15,6 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        // Загружаем первый уровень
         SceneManager.LoadScene("Game");
     }
 
@@ -32,19 +30,23 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    // Кнопка для сброса прогресса
+    // Кнопка для ПОЛНОГО сброса всего прогресса
     public void ResetGameProgress()
     {
+        // 1. Стираем абсолютно все записи PlayerPrefs (валюта, покупки, ID скинов)
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save(); // Принудительно сохраняем изменения
+
+        // 2. Сбрасываем прогресс уровней через LevelManager (если он хранит что-то в переменных)
         if (LevelManager.Instance != null)
         {
             LevelManager.Instance.ResetProgress();
-            // Перезагружаем сцену, чтобы обновить кнопки
-            SceneManager.LoadScene("MainMenu");
         }
-        else
-        {
-            Debug.LogError("LevelManager не найден!");
-        }
+
+        Debug.Log("Весь прогресс, валюта и покупки сброшены!");
+
+        // 3. Перезагружаем сцену, чтобы скрипты подхватили пустые значения
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void QuitGame()

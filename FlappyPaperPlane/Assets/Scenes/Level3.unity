@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 1067928395}
   - component: {fileID: 1067928393}
   - component: {fileID: 1067928400}
+  - component: {fileID: 1067928401}
   m_Layer: 0
   m_Name: 5258117835756606456_0 (1)
   m_TagString: player
@@ -848,6 +849,21 @@ PolygonCollider2D:
       - {x: -0.48999998, y: -0.705}
       - {x: -0.42, y: -0.645}
   m_UseDelaunayMesh: 0
+--- !u!114 &1067928401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067928392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef616873ecf646a48a735ab8dd77b961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  allSkins: []
+  applyExactTransform: 1
 --- !u!1 &1081111110
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,11 +10,11 @@ public class FancyButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private Vector3 _initialScale;
     private TMP_Text _buttonText;
 
-    [Header("÷вета (—еро-син€€ гамма)")]
+    [Header("÷вета (€рка€ гамма)")]
     // —покойный серо-синий
-    public Color normalColor = new Color(0.36f, 0.42f, 0.5f);
+    public Color normalColor = Color.white;
     // ћ€гкий светлый оттенок при наведении (не €ркий)
-    public Color hoverColor = new Color(0.45f, 0.52f, 0.6f);
+    public Color hoverColor = new Color(1f, 1f, 1f, 1f);
     public float colorTransitionSpeed = 6f;
 
     [Header("јнимаци€")]
