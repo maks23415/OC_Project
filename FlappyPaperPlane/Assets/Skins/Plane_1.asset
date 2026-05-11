@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinName: "\u0414\u0435\u0440\u0435\u0432\u044F\u043D\u043D\u044B\u0439"
   skinSprite: {fileID: 1879290178645528608, guid: 646ce08f0e24cfd4da8b7f8da45ef865, type: 3}
-  price: 150
+  price: 15
   skinID: plane_1

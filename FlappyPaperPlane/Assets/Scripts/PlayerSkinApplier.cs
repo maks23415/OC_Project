@@ -7,15 +7,14 @@ public class PlayerSkinApplier : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public List<SkinItem> allSkins;
 
-    [Header("Точные настройки из инспектора")]
+    [Header("Точные настройки из твоего скриншота")]
     public bool applyExactTransform = true;
 
-    // Твои значения Position
-    private Vector3 targetPosition = new Vector3(-0.1443f, -0.2258f, 1f);
-    // Твои значения Rotation (Z = 1)
+    private Vector3 targetPosition = new Vector3(-0.06f, -0.12f, 1f);
+
     private Vector3 targetRotation = new Vector3(0f, 0f, 1f);
-    // Твои значения Scale
-    private Vector3 targetScale = new Vector3(0.32f, 0.32f, 0.4f);
+
+    private Vector3 targetScale = new Vector3(0.3f, 0.5f, 0.5f);
 
     void Awake()
     {
@@ -29,7 +28,6 @@ public class PlayerSkinApplier : MonoBehaviour
 
         if (applyExactTransform)
         {
-            // Устанавливаем всё в точности как ты указал
             transform.localPosition = targetPosition;
             transform.localRotation = Quaternion.Euler(targetRotation);
             transform.localScale = targetScale;
@@ -44,7 +42,7 @@ public class PlayerSkinApplier : MonoBehaviour
         if (currentSkin != null && spriteRenderer != null)
         {
             spriteRenderer.sprite = currentSkin.skinSprite;
-            Debug.Log($"[SkinSystem] Скин {selectedID} применен с твоими точными размерами.");
+            Debug.Log($"[SkinSystem] Скин {selectedID} применен с масштабом {targetScale}");
         }
     }
 }
