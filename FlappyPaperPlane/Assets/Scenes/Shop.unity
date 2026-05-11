@@ -193,8 +193,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -47}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: -33.327835, y: -82.55}
+  m_SizeDelta: {x: 240.6537, y: 271.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272008643
 MonoBehaviour:
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.83921576, g: 0.83921576, b: 0.83921576, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -846,7 +846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -345, y: 190}
+  m_AnchoredPosition: {x: -290, y: 184.69}
   m_SizeDelta: {x: 158.9585, y: 39.3744}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &872866484
@@ -925,8 +925,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -921295759328906477, guid: cd67372d9585eae40ad3067df6cc0738, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -955,8 +955,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0af30de3f414a3c4a96fe52a5fd5a873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalColor: {r: 0.36, g: 0.42, b: 0.5, a: 1}
-  hoverColor: {r: 0.45, g: 0.52, b: 0.6, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  hoverColor: {r: 1, g: 1, b: 1, a: 1}
   colorTransitionSpeed: 6
   scaleMultiplier: 1.05
   animationSpeed: 8
@@ -1383,8 +1383,8 @@ Transform:
   m_GameObject: {fileID: 1336702543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0428, y: 0.0339, z: 0}
-  m_LocalScale: {x: 2.809125, y: 2.4768462, z: 1}
+  m_LocalPosition: {x: -0.0245, y: -0.0095, z: 0}
+  m_LocalScale: {x: 2.6926763, y: 2.6458032, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1576,7 +1576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

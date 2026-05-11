@@ -7,7 +7,11 @@ public class Air : MonoBehaviour
 {
     public float rotatePower;
     public float jumpSpeed;
-    public float speed;
+
+    [Header("Настройки скорости")]
+    public float speed; // Это будет стандартная скорость
+    public List<float> speedsPerLevel = new List<float> { 5f, 7f, 10f }; // Список скоростей для уровней
+
     public AudioClip jumpSound;
 
     private AudioSource source;
@@ -15,9 +19,35 @@ public class Air : MonoBehaviour
 
     private void Start()
     {
+        //  Сначала определяем скорость в зависимости от уровня
+        SetSpeedByLevel();
+
+        // Передаем итоговую скорость в твой глобальный скрипт движения объектов
         Object.speed = speed;
+
         source = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void SetSpeedByLevel()
+    {
+        // Проверяем, существует ли LevelManager
+        if (LevelManager.Instance != null)
+        {
+            int currentLevel = LevelManager.Instance.GetCurrentLevel(); 
+            int index = currentLevel - 1; // Индекс в списке (для 1 уровня это 0)
+
+            // Если для этого уровня прописана скорость в списке берем её
+            if (index >= 0 && index < speedsPerLevel.Count)
+            {
+                speed = speedsPerLevel[index];
+                Debug.Log("Установлена скорость для уровня " + currentLevel + ": " + speed);
+            }
+            else
+            {
+                Debug.LogWarning("Скорость для уровня " + currentLevel + " не настроена в списке! Использую стандартную: " + speed);
+            }
+        }
     }
 
     private void Update()
@@ -32,7 +62,6 @@ public class Air : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // При смерти возвращаемся в главное меню
         SceneManager.LoadScene("MainMenu");
     }
 
